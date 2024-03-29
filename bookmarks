@@ -1,0 +1,82 @@
+;;;; Emacs Bookmark Format Version 1;;;; -*- coding: utf-8-emacs; mode: lisp-data -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("soaadapter"
+ (filename . "/ssh:leapMachine:~/bsw.ds.leap.platform/base/source/target/soaadapter/")
+ (front-context-string . "logging\n  drwxr-")
+ (rear-context-string . "96 Jan  8 10:43 ")
+ (position . 488)
+ (last-modified 26076 41659 141366 55000))
+("leap_driver"
+ (filename . "/ssh:leapMachine:~/bsw.ds.leap.platform/base/source/target/driver/")
+ (front-context-string . "gsm\n  drwxr-xr-x")
+ (rear-context-string . "96 Feb 26 10:38 ")
+ (position . 535)
+ (last-modified 26076 35790 55887 976000))
+("adapter"
+ (filename . "/ssh:leapMachine:~/bsw.ds.leap.platform/base/source/target/adapter/")
+ (front-context-string . "mobile\n  drwxr-x")
+ (rear-context-string . "96 Feb 26 10:38 ")
+ (position . 1030)
+ (last-modified 26076 35381 364785 223000))
+("driver_gsm"
+ (filename . "/ssh:leapMachine:~/bsw.ds.leap.platform/base/source/target/driver/gsm/")
+ (front-context-string)
+ (rear-context-string . "96 Feb 26 10:38 ")
+ (position . 376)
+ (last-modified 26076 35340 708223 675000))
+("~"
+ (filename . "~/")
+ (front-context-string . ".emacs.d\n  -rw-r")
+ (rear-context-string . "96 Feb 22 14:20 ")
+ (position . 1047)
+ (last-modified 26076 22923 856208 706000))
+("projects.org"
+ (filename . "/mnt/hgfs/Ubuntu_Share/wd/ces_managerial/projects.org")
+ (front-context-string . " while opening t")
+ (rear-context-string . "e are any errors")
+ (position . 11675)
+ (last-modified 26072 26732 198109 328000))
+("leap_package"
+ (filename . "/ssh:leapMachine:~/bsw.ds.leap.platform/base/source/target/package/")
+ (front-context-string . "otx\n  drwxr-xr-x")
+ (rear-context-string . "96 Jan  8 10:43 ")
+ (position . 1129)
+ (last-modified 26069 65127 353585 96000))
+("fermi_imx8"
+ (filename . "/ssh:leapMachine:~/fermi_imx8/")
+ (front-context-string . ".build\n  drwxr-x")
+ (rear-context-string . "96 Feb 15 17:22 ")
+ (position . 223)
+ (last-modified 26067 24665 679388 818000))
+("leap"
+ (filename . "/ssh:leapMachine:/home/uic17457/")
+ (front-context-string . "\n  -rw-------  1")
+ (rear-context-string . "_.gitconfig.json")
+ (position . 1183))
+("Ubuntu_Share"
+ (filename . "/mnt/hgfs/Ubuntu_Share/")
+ (front-context-string . "bswlogs.bin\n  -r")
+ (rear-context-string . "68 Okt 23 10:35 ")
+ (position . 195))
+("network"
+ (filename . "/ssh:leapMachine:/home/uic17457/bsw.ds.leap.platform/base/source/target/package/network/")
+ (front-context-string)
+ (rear-context-string . "96 Feb 13 13:47 ")
+ (position . 387))
+("nad"
+ (filename . "/ssh:leapMachine:/home/uic17457/fermi_sa415m/project/pcm3/package/ipmanager/network-manager/")
+ (front-context-string . "include\n  drwxr-")
+ (rear-context-string . "96 Feb 13 16:46 ")
+ (position . 573))
+("t"
+ (filename . "/mnt/d/OldPC/bkup_d/Ubuntu_Share/wd/ces_managerial/projects.org")
+ (front-context-string . "**** Dev Environ")
+ (rear-context-string . "tspot+Concept]]\n")
+ (position . 6987))
+("i"
+ (filename . "~/.emacs.d/init.el")
+ (front-context-string . " ;dired jump\n\n\n\n")
+ (rear-context-string . "j\") 'dired-jump)")
+ (position . 2477)))

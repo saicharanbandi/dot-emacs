@@ -1,0 +1,13 @@
+# Target labels
+ libvterm
+# Source files and their labels
+/home/uic17457/.emacs.d/elpa/vterm-20240102.1640/build/CMakeFiles/libvterm
+/home/uic17457/.emacs.d/elpa/vterm-20240102.1640/build/CMakeFiles/libvterm.rule
+/home/uic17457/.emacs.d/elpa/vterm-20240102.1640/build/CMakeFiles/libvterm-complete.rule
+/home/uic17457/.emacs.d/elpa/vterm-20240102.1640/build/libvterm-prefix/src/libvterm-stamp/libvterm-install.rule
+/home/uic17457/.emacs.d/elpa/vterm-20240102.1640/build/libvterm-prefix/src/libvterm-stamp/libvterm-mkdir.rule
+/home/uic17457/.emacs.d/elpa/vterm-20240102.1640/build/libvterm-prefix/src/libvterm-stamp/libvterm-download.rule
+/home/uic17457/.emacs.d/elpa/vterm-20240102.1640/build/libvterm-prefix/src/libvterm-stamp/libvterm-update.rule
+/home/uic17457/.emacs.d/elpa/vterm-20240102.1640/build/libvterm-prefix/src/libvterm-stamp/libvterm-patch.rule
+/home/uic17457/.emacs.d/elpa/vterm-20240102.1640/build/libvterm-prefix/src/libvterm-stamp/libvterm-configure.rule
+/home/uic17457/.emacs.d/elpa/vterm-20240102.1640/build/libvterm-prefix/src/libvterm-stamp/libvterm-build.rule

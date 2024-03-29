@@ -1,0 +1,2 @@
+#run gtest
+gtest -make gsmDriverApiBasedErrorRecoveryDaemonTest && gsmDriverApiBasedErrorRecoveryDaemonTest
