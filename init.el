@@ -76,11 +76,14 @@
 (global-set-key (kbd "C-x f") 'find-name-dired)  ;find in dired
 (global-set-key [f6] 'display-line-numbers-mode) ;linum mode
 (global-set-key [f7] #'whitespace-mode)          ;whitespace mode
+(global-set-key (kbd "C-c C-c") 'comment-region)
 
 
 ;;multi-cursors
 (use-package multiple-cursors
   :ensure t)
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; treemacs
 (use-package treemacs
@@ -88,8 +91,8 @@
   :bind ("<f5>" . treemacs)
   :custom
   (treemacs-is-never-other-window t)
-  ;;:hook
-  ;;(treemacs-mode . treemacs-project-follow-mode)
+  :hook
+  (treemacs-mode . treemacs-project-follow-mode)
   )
 
 ;;; vertico pos frame
@@ -116,12 +119,77 @@
   )
 
 ;;;;Corfu - to be reviewed
-
-;;;; company mode
-(use-package company
+;;; lsp for now!!
+(use-package lsp-mode
   :ensure t
-  :hook (after-init . global-company-mode))
+  :commands (lsp lsp-deferred)
+  :init
+  (setq lsp-keymap-prefix "C-c l")
+  :config
+  (lsp-enable-which-key-integration t))
+;;;; company mode
+;; (use-package company
+;;   :ensure t
+;;   :hook (after-init . global-company-mode))
 
+;;completion frameworks
+;; Enable rich annotations using the Marginalia package
+(use-package marginalia
+  ;; Bind `marginalia-cycle' locally in the minibuffer.  To make the binding
+  ;; available in the *Completions* buffer, add it to the
+  ;; `completion-list-mode-map'.
+  :bind (:map minibuffer-local-map
+         ("M-A" . marginalia-cycle))
+
+  ;; The :init section is always executed.
+  :init
+
+  ;; Marginalia must be activated in the :init section of use-package such that
+  ;; the mode gets enabled right away. Note that this forces loading the
+  ;; package.
+  (marginalia-mode))
+
+(use-package embark
+  :ensure t
+
+  :bind
+  (("C-." . embark-act)         ;; pick some comfortable binding
+   ("C-;" . embark-dwim)        ;; good alternative: M-.
+   ("C-h B" . embark-bindings)) ;; alternative for `describe-bindings'
+
+  :init
+
+  ;; Optionally replace the key help with a completing-read interface
+  (setq prefix-help-command #'embark-prefix-help-command)
+
+  ;; Show the Embark target at point via Eldoc. You may adjust the
+  ;; Eldoc strategy, if you want to see the documentation from
+  ;; multiple providers. Beware that using this can be a little
+  ;; jarring since the message shown in the minibuffer can be more
+  ;; than one line, causing the modeline to move up and down:
+
+  ;; (add-hook 'eldoc-documentation-functions #'embark-eldoc-first-target)
+  ;; (setq eldoc-documentation-strategy #'eldoc-documentation-compose-eagerly)
+
+  :config
+
+  ;; Hide the mode line of the Embark live/completions buffers
+  (add-to-list 'display-buffer-alist
+               '("\\`\\*Embark Collect \\(Live\\|Completions\\)\\*"
+                 nil
+                 (window-parameters (mode-line-format . none)))))
+
+;; Consult users will also want the embark-consult package.
+(use-package embark-consult
+  :ensure t ; only need to install it, embark loads it after consult if found
+  :hook
+  (embark-collect-mode . consult-preview-at-point-mode))
+
+(use-package orderless
+  :ensure t
+  :custom
+  (completion-styles '(orderless basic))
+  (completion-category-overrides '((file (styles basic partial-completion)))))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;plantuml
 (use-package plantuml-mode
@@ -139,7 +207,6 @@
   (which-key-mode)
   (setq which-key-idle-delay 0.7))
 
-;;completion frameworks
 (use-package vertico
   :ensure t
   :config
@@ -218,7 +285,7 @@
  '(indent-tabs-mode nil)
  '(org-agenda-files nil)
  '(package-selected-packages
-   '(multiple-cursors company spacious-padding golden-ratio vertico-posframe treemacs corfu which-key whichkey vterm vertico magit use-package)))
+   '(orderless embark-consult embark marginalia eglot lsp-mode multiple-cursors company spacious-padding golden-ratio vertico-posframe treemacs corfu which-key whichkey vterm vertico magit use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

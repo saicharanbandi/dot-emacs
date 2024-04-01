@@ -2,7 +2,19 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("soaadapter"
+(("ces5g_holon"
+ (filename . "~/projects/ces5g_holon/")
+ (front-context-string . "a35\n  drwx------")
+ (rear-context-string . "96 Feb  1 08:37 ")
+ (position . 231)
+ (last-modified 26122 41481 860403 871000))
+("Personal"
+ (filename . "/mnt/hgfs/Ubuntu_Share/OldPC/bkup_d/Personal/")
+ (front-context-string . "114053843.pdf\n  ")
+ (rear-context-string . "65 Sep 12  2019 ")
+ (position . 213)
+ (last-modified 26118 44600 155521 942000))
+("soaadapter"
  (filename . "/ssh:leapMachine:~/bsw.ds.leap.platform/base/source/target/soaadapter/")
  (front-context-string . "logging\n  drwxr-")
  (rear-context-string . "96 Jan  8 10:43 ")
@@ -79,4 +91,5 @@
  (filename . "~/.emacs.d/init.el")
  (front-context-string . " ;dired jump\n\n\n\n")
  (rear-context-string . "j\") 'dired-jump)")
- (position . 2477)))
+ (position . 2477))
+)
